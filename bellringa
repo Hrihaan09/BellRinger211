@@ -1,0 +1,11 @@
+from datetime import datetime
+import time
+
+t = time.localtime()
+t1 = time.strftime("%H:%M:%S", t)
+classendtime = "2:19"
+t2 = datetime.strptime(classendtime, "%H:%M")
+diff = t2 - t1
+sec = diff.total_seconds()
+min = sec / 60
+print('difference in minutes:', min)
